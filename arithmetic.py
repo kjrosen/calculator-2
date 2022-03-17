@@ -1,28 +1,41 @@
 """Functions for common math operations."""
 
 
-def add(num1, num2):
+def add(nums):
     """Return the sum of the two input integers."""
+    sum_nums = 0
+    for num in nums:
+        sum_nums += num
+    return sum_nums
 
-    return num1 + num2
 
-
-def subtract(num1, num2):
+def subtract(nums):
     """Return the second number subtracted from the first."""
+    difference = nums[0]
+    nums.pop(0)
 
-    return num1 - num2
+    for num in nums:
+        difference -= num
+    return difference
 
 
-def multiply(num1, num2):
+def multiply(nums):
     """Multiply the two inputs together."""
+    product = 1
+    for num in nums:
+        product *= num
 
-    return num1 * num2
+    return product
 
 
-def divide(num1, num2):
+def divide(nums):
     """Divide the first input by the second, returning a floating point."""
-
-    return num1 / num2
+    quotient = nums[0]
+    nums.pop(0)
+    
+    for num in nums:
+        quotient /= num
+    return quotient
 
 
 def square(num1):
