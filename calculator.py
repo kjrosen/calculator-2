@@ -6,6 +6,7 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 ## repeat forever
 while True:
+
     ## read user input (string of operator, num1, num2)
     ## tokenize (split) input into list, so each entry has an index
     nums = input("""Input some math \nAdd (+), Subtract (-), Multiply (*), Divide (/),
@@ -15,10 +16,6 @@ while True:
     ##removes the operator from the list so only nums are left
     operator = token[0]
     token.pop(0)
-
-    ## need to turn all indexes after 0 into ints
-    for num in range(len(token)):
-        token[num] = int(token[num])
 
     ## stop if the user inputs q
     if operator == "q":
@@ -49,6 +46,6 @@ while True:
         print(power(token[1], token[2]))
     ## mod
     elif operator == "mod":
-        print(mod(token[1], token[2]))
+        print(mod(token))
         
     print()

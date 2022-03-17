@@ -32,7 +32,7 @@ def divide(nums):
     """Divide the first input by the second, returning a floating point."""
     quotient = nums[0]
     nums.pop(0)
-    
+
     for num in nums:
         quotient /= num
     return quotient
@@ -56,7 +56,11 @@ def power(num1, num2):
     return num1 ** num2  # ** = exponent operator
 
 
-def mod(num1, num2):
+def mod(nums):
     """Return the remainder of num / num2."""
+    final = nums[0]
+    nums.pop(0)
 
-    return num1 % num2
+    for num in nums:
+        final %= num
+    return final
